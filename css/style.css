@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a49; }
+
+.container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; }
+  .container .css-button {
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    border: 2px solid #43d728;
+    transition: 0.4s all;
+    margin: 20px; }
+    .container .css-button:hover {
+      transform: translateY(-10px);
+      transition: 0.4s all; }
+    .container .css-button.active {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      animation: activeAnimate 5s; }
+      .container .css-button.active.css-button {
+        color: transparent; }
+      .container .css-button.active::before {
+        position: absolute;
+        content: "";
+        width: 28px;
+        height: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        font-size: 14px;
+        border-radius: 10px;
+        border: 2px solid #43d728;
+        transform: translate(-79%, -50%) rotate(45deg);
+        background-color: white;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation: buttonAnuimationCss 5s; }
+      .container .css-button.active::after {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 0px;
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        transform: translate(-7px, -10px) rotate(-45deg);
+        background-color: white;
+        border: 2px solid #43d728;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation: afterAnimation 5s; }
+    .container .css-button.active-invalid {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      animation: activeAnimate 5s; }
+      .container .css-button.active-invalid.css-button {
+        color: transparent;
+        animation: activeAnimate 5s;
+        border: 2px solid #ed2d26; }
+      .container .css-button.active-invalid::before {
+        position: absolute;
+        content: "";
+        width: 28px;
+        height: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        font-size: 14px;
+        border-radius: 10px;
+        border: 2px solid #ed2d26;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: white;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation: buttonAnuimationCss 5s; }
+      .container .css-button.active-invalid::after {
+        position: absolute;
+        content: "";
+        width: 28px;
+        height: 0px;
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        background-color: white;
+        border: 2px solid #ed2d26;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation: afterAnimation 5s; }
+
+@keyframes activeAnimate {
+  0% {
+    width: 200px;
+    height: 70px;
+    border: 2px solid #43d728;
+    background-color: transparent; }
+  90% {
+    width: 200px;
+    height: 70px;
+    border: 2px solid #43d728;
+    background-color: transparent; }
+  100% {
+    width: 50px;
+    border: 2px solid #43d728;
+    height: 50px; } }
+
+@keyframes buttonAnuimationCss {
+  0% {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white;
+    content: "Please wait."; }
+  5% {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white;
+    content: "Please wait.."; }
+  10% {
+    content: "Please wait...";
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white; }
+  15% {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white;
+    content: "Please wait.."; }
+  20% {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white;
+    content: "Please wait."; }
+  25% {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white;
+    content: "Please wait.."; }
+  30% {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white;
+    content: "Please wait.."; }
+  40% {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white;
+    content: "Please wait..."; }
+  50% {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white;
+    content: "Please wait.."; }
+  60% {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white;
+    content: "Please wait."; }
+  70% {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate(0, 0) rotate(0);
+    background-color: transparent;
+    color: white;
+    content: "Please wait."; }
+  80% {
+    content: "..."; } }
+
+@keyframes afterAnimation {
+  0% {
+    opacity: 0; }
+  99% {
+    width: 10px;
+    opacity: 0; }
+  100% {
+    width: 50px;
+    opacity: 1; } }
